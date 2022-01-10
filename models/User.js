@@ -1,9 +1,10 @@
 const { Schema, model } = require('mongoose');
+const { validateEmail } = require('../utils/helpers');
 
-const validateEmail = (email) => {
-    const emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-    return emailPattern.test(email);
-}
+// const validateEmail = (email) => {
+//     const emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+//     return emailPattern.test(email);
+// }
 
 const userSchema = new Schema(
     {

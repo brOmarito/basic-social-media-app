@@ -3,6 +3,8 @@ const {
     getUsers,
     createUser,
     getUserById,
+    updateUserById,
+    deleteUserById,
 } = require('../../controllers/userController');
 
 router.route('/')
@@ -10,6 +12,8 @@ router.route('/')
     .post(createUser);
 
 router.route('/:id')
-    .get(getUserById);
+    .get(getUserById)
+    .put(updateUserById)
+    .delete(deleteUserById);
 
 module.exports = router;
