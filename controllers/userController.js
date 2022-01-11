@@ -1,4 +1,3 @@
-const { json } = require('express/lib/response');
 const { Thought, User } = require('../models');
 
 module.exports = {
