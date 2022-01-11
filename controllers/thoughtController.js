@@ -42,6 +42,23 @@ module.exports = {
         }
     },
 
+    async updateThoughtById(req, res) {
+        try {
+            const updatedThought = await Thought.findByIdAndUpdate(
+                req.params.id,
+                req.body,
+                {
+                    runValidators: true,
+                    new: true,
+                },
+            );
+            if (!updatedThought) return res.status(404).json({ message: "No Thought found with that ID" });
+            res.status(200).json(updatedThought);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    },
+
     async deleteThoughtById(req, res) {
         try {
             const deletedThoughtData = await Thought.findByIdAndDelete(req.params.id);
@@ -80,5 +97,5 @@ module.exports = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
 }
