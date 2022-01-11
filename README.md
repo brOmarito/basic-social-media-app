@@ -8,3 +8,6 @@ As I mentioned above, one of the motivations to build this app was to practice u
 * Add more models
 * Remove the _id field from the reaction model
 * Add a seeds file for quick test data
+
+## Tutorial
+Check out the Demo <a href="https://watch.screencastify.com/v/PRKJM0u9TTyQ4Q24fJpg">HERE</a>
